@@ -6,18 +6,25 @@ import { HomeComponent } from './home/home.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
-import { routes } from './app.routes';
-
+//import { routes } from './app.routes';
+import{route} from './app.routes';
+import { CustomersModule } from './customers/customers.module';
+import { OrdersModule } from './orders/orders.module';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutmeComponent,
-    ContactComponent
+    ContactComponent,
+    // CustomersModule,
+    // OrdersModule
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    CustomersModule,
+    OrdersModule,
+    //RouterModule.forRoot(routes),
+    RouterModule.forRoot(route)
   ],
   providers: [],
   bootstrap: [AppComponent]

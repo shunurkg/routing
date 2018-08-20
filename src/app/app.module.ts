@@ -9,21 +9,18 @@ import { RouterModule } from '@angular/router';
 //import { routes } from './app.routes';
 import{route} from './app.routes';
 import { CustomersModule } from './customers/customers.module';
-import { OrdersModule } from './orders/orders.module';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutmeComponent,
-    ContactComponent,
-    // CustomersModule,
-    // OrdersModule
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     CustomersModule,
-    OrdersModule,
-    //RouterModule.forRoot(routes),
+    // OrdersModule,
+    
     RouterModule.forRoot(route)
   ],
   providers: [],

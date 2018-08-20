@@ -5,7 +5,6 @@ import { ContactComponent } from './contact/contact.component';
 import { CustomerratingComponent } from './customers/customerrating/customerrating.component';
 import { CustomerlistComponent } from './customers/customerlist/customerlist.component';
 import {CustomersModule} from './customers/customers.module';
-import {OrdersModule} from './orders/orders.module';
 
 
 
@@ -26,16 +25,12 @@ import {OrdersModule} from './orders/orders.module';
 // ]
 export const route: Routes = [
     {
-      path: 'customers',
+      path:'',
       loadChildren:'./customers/customers.module#CustomersModule'
-    },
-    {
-      path: 'orders',
-      loadChildren: './orders/orders.module#OrdersModule'
-    },
-    {
-      path: '',
-      redirectTo: '',
-      pathMatch: 'full'
     }
+    // {
+    //   path: 'orders',
+    //   loadChildren: './orders/orders.module#OrdersModule'
+    // },
+    
   ];
